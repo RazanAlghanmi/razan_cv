@@ -1,0 +1,233 @@
+﻿body {
+    font-family: monospace;
+    background-color: #fbdceb;
+    color: #f3325a;
+    font-weight: 100;
+    font-size: small;
+    margin: 0;
+    padding: 10px;
+}
+
+.inline-navbar {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+    .inline-navbar .nav-item {
+        display: inline-block;
+        margin-right: 10px;
+        color: #7d6974;
+    }
+
+        .inline-navbar .nav-item a {
+            color: #7d6974;
+            text-decoration: none;
+        }
+
+.container {
+    border: 3px solid #f75e84;
+    margin: 20px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+}
+
+.header {
+    grid-column: 1 / span 2;
+    font-family: monospace;
+    font-size: large;
+    text-align: left;
+    background-image: linear-gradient(to right, transparent, #f75e84, transparent);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 70% 3px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-content {
+    flex-grow: 1;
+}
+
+.logo {
+    order: 2;
+}
+
+.education h5 {
+    color: #b39ba7;
+}
+
+.about p, .education p, .projects p {
+    color: #7d6974;
+}
+
+
+
+.about, .contact, .skills, .intersets, .education, .projects {
+    padding: 10px;
+    margin: 5px;
+}
+
+.contact article, .intersets article, .skills article {
+        border-left-width: 3px;
+        border-left-color: #f75e84;
+        border-left-style: solid;
+    }    
+
+
+  .contact li, .intersets li, .projects li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        color: #7d6974;
+    }  
+
+
+
+.interests-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.interests-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+    .interests-list li {
+        flex: 1;
+        text-align: center;
+        margin: 10px;
+    }
+
+.contact img {
+    margin-right: 10px;
+}
+
+.skills article {
+    text-align: center;
+}
+
+.progress-bar {
+    width: 60%;
+    height: 20px;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.skills span {
+    color: #7d6974;
+}
+
+.progress-bar::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.progress-bar::-webkit-progress-value {
+    background-color: #f75e84;
+    border-radius: 10px;
+}
+
+.percentage {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.contact a, .projects a {
+    text-decoration: none;
+    color: #7d6974;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: smaller;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        margin: 10px;
+    }
+
+    .header {
+        grid-column: 1;
+    }
+
+    .about, .education, .skills, .projects, .interests {
+        margin: 5px;
+    }
+
+    .interests-content {
+        flex-direction: column;
+    }
+
+    .interests-list li {
+        margin: 0 10px 10px 0;
+        font-size: xx-small;
+    }
+
+    .logo {
+        width: 75px;
+        height: 75px;
+    }
+
+    .contact article, .intersets article, .skills article {
+        text-align: left;
+    }
+
+    .interests-list img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    body {
+        font-size: medium;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        margin: 15px;
+    }
+
+    .interests-list li img {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    body {
+        font-size: large;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+        margin: 20px;
+    }
+
+    .interests-list li img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.contact img, .interests-list li img {
+    max-width: 50%;
+    height: auto;
+}
